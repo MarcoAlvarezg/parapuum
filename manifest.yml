@@ -1,0 +1,5 @@
+applications:
+- name: Developers-IBM
+  memory: 256M
+  services:
+        - appIDInstanceName-alias
