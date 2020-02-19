@@ -276,7 +276,7 @@ Modificacion de la foto de inicio */
   height: auto;
   text-align: center;
   color: #fff;
-  background: url(../images/about.jpg) no-repeat center center;
+  background: url(../images/final.jpeg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -362,7 +362,7 @@ Modificacion de la foto de inicio */
   height: auto;
   text-align: center;
   color: #fff;
-  background: url(../images/about.jpg) no-repeat center center;
+  background: url(../images/skill.jpeg) no-repeat center center;/* no aparece el cambio */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -586,7 +586,7 @@ ol.type li a:hover {
 
 #achievements {
   color: #fff;
-  background: url(../images/final.jpeg);
+  background: url(../images/final1.jpeg);/* no aparece la imagen */
   background-color: #7bc3d1;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -645,7 +645,7 @@ ol.type li a:hover {
   position: relative;
   margin-top: 20px;
   border: 0;
-  text-align: center;
+  text-align: left;
   background: #fff;
   padding: 30px 20px;
 }
@@ -667,7 +667,7 @@ ol.type li a:hover {
 
 #contact {
   color: #fff;
-  background: url(../images/final.jpeg) no-repeat center top;
+  background: url(../images/final1.jpeg) no-repeat center top;
   background-color: #7bc3d1;
   -webkit-background-size: cover;
   -moz-background-size: cover;
