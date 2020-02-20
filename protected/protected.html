@@ -82,7 +82,7 @@
               <h2><strong>Productos<strong></h2>
               <hr>
               </div>
-            <div class="row">
+            <!-- <div class="row">
                 <h2>
                   <div class = "col-sm-3"><span id="b6f5179410b0740e1ac3d2448324b7ff"></span></div>
                   <div class = "col-sm-3"><span id="eee48a98b24647697ef1434ba78540b7"></span></div>
@@ -141,7 +141,7 @@
                   <br>
                 <hr id="l1">
                 <br>
-                <br>
+                <br> -->
           </div>          
           </div>
         </div>
@@ -155,11 +155,11 @@
               <hr>
             </div>
             <div class="row">
-              <div class="progress">
+              <!-- <div class="progress">
                 <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width:90%">
                  <span id="horasReg"></span> hrs
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="col-md-8 col-md-offset-2">
               <form name="addActivity" id="addActivity" method="POST">
@@ -167,55 +167,29 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <input type="hidden" id="user" name="user" value="" />
-                      <div class="item-required">
-                      <select class="form-control" id="actType" nonvalidate>
-                        <option selected="true" disabled>Tipo de actividad</option>
-                        <option>Clase o Conferencia</option>
-                        <option>Taller o Workshop</option>
-                        <option>Bootcamp o Diplomado</option>
-                      </select>
-                      <p class="help-block text-danger"></p>
                       </div>
-                    </div>
                   </div>
+                  
                   <div class="col-md-6">
                     <div class="form-group">
-                      <div class="item-required">
-                      <input type="number" id="hours" class="form-control" min="0" max="100" placeholder="Cantidad de horas (sin minutos)" required>
-                      <p class="help-block text-danger"></p>
-                    </div></div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input type="text" id="loc" class="form-control" placeholder="Ubicación del evento" required>
-                      <p class="help-block text-danger"></p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input type="text" id="students" class="form-control" placeholder="Cantidad de alumnos participantes" required>
-                      <p class="help-block text-danger"></p>
-                    </div>
-                  </div>
-                  <!---->
-                  <div class="col-md-6">
-                    <div class="form-group">
+                      <div>
                         <div class="item-required">
                       <select id="ins" class="form-control" required>
 
                       </select>
                       <p class="help-block text-danger"></p>
                         </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <textarea name="message" id="comment" class="form-control" rows="3" placeholder="Comentarios adicionales que quieras compartir" required></textarea>
+                  <textarea name="message" id="comment" class="form-control" rows="3" placeholder="Comentarios" required></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
                     <div class="form-group">
                         <div class="star-rating"> 
-                            <h5>Califica tu experiencia</h5>
+                            <h5>Califica tu experiencia y tu producto</h5>
                             <div class="rating">
                               <input type="radio" id="star5" name="rating" onclick="handleClick(this);" value="5" class="radio-1" />
                               <label for="star5" class="star star-1" title="Excellent"></label>
@@ -435,7 +409,7 @@
           //para las instituciones
           let dropdown = $('#ins');
           dropdown.empty();
-          dropdown.append('<option selected="true" disabled> Institucion </option>');
+          dropdown.append('<option selected="true" disabled> Producto </option>');
           dropdown.prop('selectedIndex', 0);
           $.getJSON('/protected/api/inst', function (data){
             var h = data.docs;
