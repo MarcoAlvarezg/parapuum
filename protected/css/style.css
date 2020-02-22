@@ -586,7 +586,7 @@ ol.type li a:hover {
 
 #Favoritos {
   /*color: #fff; */
-  background: url(../images/fav.jpeg);/* no aparece la imagen */
+  background: url(../images/fav.jpeg) no-repeat center center;/* no aparece la imagen */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -598,11 +598,11 @@ ol.type li a:hover {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6b4da8+0,4977c2+100 */
   /*background: rgb(107, 77, 168);*/
   /* Old browsers */
-  background: -moz-linear-gradient(left, rgb(151, 231, 255) 0%, rgb(151, 231, 255) 100%);
+  background: -moz-linear-gradient(left, rgba(151, 231, 255, 0.70) 0%, rgba(151, 231, 255, 0.70) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgb(151, 231, 255) 0%, rgb(151, 231, 255) 100%);
+  background: -webkit-linear-gradient(left, rgba(151, 231, 255, 0.70) 0%, rgba(151, 231, 255, 0.70) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, rgb(151, 231, 255) 0%, rgb(151, 231, 255) 100%);
+  background: linear-gradient(to right, rgba(151, 231, 255, 0.70) 0%, rgba(151, 231, 255, 0.70) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b4da8', endColorstr='#4977c2', GradientType=1);
   /* IE6-9 */
