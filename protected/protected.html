@@ -414,7 +414,7 @@
           $.getJSON('/protected/api/inst', function (data){
             var h = data.docs;
             $.each(h, function (key, entry){
-             dropdown.append(new Option(entry.nombre));
+             dropdown.append(new Option(entry.categoria+" "+entry.nombre));
             });
           })
           </script>

@@ -5,13 +5,13 @@ var data2;
 class cloudbd {
         conexion(){
             return new Promise(function (resolve, reject){
-            var apiUrl2 = 'https://9ae74487-3c39-48d2-8c77-e8e08435d8f0-bluemix:f79e6d0fb071befbaafc4724041b675300b7f4738c2f1cee8c026497b4d838ef@9ae74487-3c39-48d2-8c77-e8e08435d8f0-bluemix.cloudantnosqldb.appdomain.cloud';
+            var apiUrl2 = 'https://5a431425-7000-4cc2-80a5-8cbbe0fb4ea3-bluemix:fc091dd60c290d690b7b1abee31eb188d02c33af6f0460d98df1125428abc9a0@5a431425-7000-4cc2-80a5-8cbbe0fb4ea3-bluemix.cloudantnosqldb.appdomain.cloud';
             var clodant = Cloudant(apiUrl2, function (er, cloudant, reply) {
                 if(er){
                     reject(er);
                     }
                 })
-            mydb = clodant.db.use('institucion');
+            mydb = clodant.db.use('productos');
             resolve(mydb);
             });
         }
