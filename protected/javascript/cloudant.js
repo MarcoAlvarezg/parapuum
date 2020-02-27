@@ -44,17 +44,12 @@ const cloudantConnection = {
     });
   },
   // add a single activity entry
-  add(user, actType, hours, loc, students, ins, raiting, comment) {
+  add(ins, raiting, comment) {
     
-    console.log('Sending', user, actType, hours, loc, students, ins, raiting, comment)
+    console.log('Sending', ins, raiting, comment)
     return fetch(`${Url}/entries`,{
         method: "POST",
         body: JSON.stringify({
-            user,
-            actType,
-            hours,
-            loc,
-            students,
             ins,
             rating: raiting,
             comment
@@ -79,7 +74,7 @@ var n=0;
   }
 
   // retrieve entries and update the UI
-  function loadEntries() {
+  /* function loadEntries() {
     USER.get().done(function(rest){
       if(!rest){
         return
@@ -122,18 +117,13 @@ var n=0;
         })
       }
       );
-    }
+    } */
 
   // intercept the click on the submit button, add the guestbook entry and
   // reload entries on success
   $(document).on('submit', '#addActivity', function(e) {
     e.preventDefault();
     cloudantConnection.add(
-      $('#user').val().trim(),
-      $('#actType').val().trim(),
-      $('#hours').val(),
-      $('#loc').val().trim(),
-      $('#students').val().trim(),
       $('#ins').val().trim(),
       $('#rat').val().trim(),
       $('#comment').val().trim()
