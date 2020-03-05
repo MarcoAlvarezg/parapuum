@@ -1,7 +1,7 @@
 /*
  * Web application
  */
-var Url = "https://86c1ea06.us-south.apiconnect.appdomain.cloud/guestbook";
+var Url = "https://873a8b89.us-south.apigw.appdomain.cloud/favoritos";
 var UrlU = "http://localhost:3000/protected/api/idPayload";
 /* "http://localhost:3000/protected/api/idPayload"; 
    "https://developerchain.mybluemix.net/protected/api/idPayload"*/
@@ -51,7 +51,7 @@ const cloudantConnection = {
         method: "POST",
         body: JSON.stringify({
             ins,
-            rating: raiting,
+            raiting: raiting,
             comment
           }),
           headers: {
@@ -130,17 +130,17 @@ var n=0;
     ).then(function(result) {
       // reload entries
       document.getElementById("addActivity").reset();
-      alert("Actividad registrada correctamente");
+      alert("Favorito registradio correctamente");
       prepareTemplates();
-      loadEntries();
+      //loadEntries();
     }).catch(function(error) {
-      alert("Verifique sus datos ingresados");
+      alert("Verifique datos ingresados");
       console.log(error);
     });
   });
 
   $(document).ready(function() {
-    //prepareTemplates();
-    loadEntries();
+    prepareTemplates();
+    //loadEntries();
   });
 })();
