@@ -15,19 +15,7 @@ const I = {
       return;
     }
     i = res.docs;
-    // console.log(i);
-    /* let datos = JSON.parse(i);
-
-    let prod = document.querySelector(prod);
-    prod.innerHTML = '';
-
-    for(let item of datos){
-        prod.innerHTML += `
-        <tr>
-        <td>${item.producto1}</td>
-        <td>${item.producto2}</td>
-        </tr>;`
-    } */
+    
 
    $.each(i, function(ke, en){
         if(en.existencia>0){
@@ -35,10 +23,8 @@ const I = {
         producto2 = en.descripcion;
         producto3 = en.img;
         //console.log(producto3);
-        prod.innerHTML +='<h3>Producto</h3>'+producto1+'<br><br>';
-        prod.innerHTML +='<h3>Decripción</h3>'+producto2+'<br><br>';
-        prod.innerHTML +='<a><img src="'+producto3+'" width="200" height="200"></a>';
-    
+        prod.innerHTML += '<div class="column"><div class="content"><h3>Producto</h3>'+producto1+'<br><br>'+'<h3>Decripción</h3><p>'+producto2+'</p><br><br>' + '<a><img src="'+producto3+'" width="200" height="200" alt="'+producto1+'"></a><br><br></div></div>';
+
        }
     })
 });
