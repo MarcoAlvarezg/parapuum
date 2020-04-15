@@ -276,7 +276,7 @@ Modificacion de la foto de inicio */
   height: auto;
   text-align: center;
   color: #fff;
-  background: url(../images/final.jpeg) no-repeat center center;
+  background: url(../images/about.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -362,7 +362,7 @@ Modificacion de la foto de inicio */
  
   text-align: center;
   color: #fff;
-  background: url(../images/skill.jpeg) no-repeat center center;/* no aparece el cambio */
+  background: url(../images/home1.jpg) no-repeat center center;/* no aparece el cambio */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -388,7 +388,7 @@ Modificacion de la foto de inicio */
           /* Create four equal columns that floats next to each other */
           .column {
             float: left;
-            width: 25%;
+            width: 50%;
           }
           
           /* Clear floats after rows */ 
@@ -407,7 +407,7 @@ Modificacion de la foto de inicio */
           /* Responsive layout - makes a two column-layout instead of four columns */
           @media screen and (max-width: 900px) {
             .column {
-              width: 50%;
+              width: 70%;
             }
           }
           
@@ -639,7 +639,7 @@ ol.type li a:hover {
 
 #Favoritos {
   /*color: #fff; */
-  background: url(../images/fav.jpeg) no-repeat center center;/* no aparece la imagen */
+  background: url(../images/skill.jpeg) no-repeat center center;/* no aparece la imagen */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

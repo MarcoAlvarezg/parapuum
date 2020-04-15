@@ -23,7 +23,7 @@ const I = {
         producto2 = en.descripcion;
         producto3 = en.img;
         //console.log(producto3);
-        prod.innerHTML += '<div class="column"><div class="content"><h3>Producto</h3>'+producto1+'<br><br>'+'<h3>Decripción</h3><p>'+producto2+'</p><br><br>' + '<a><img src="'+producto3+'" width="200" height="200" alt="'+producto1+'"></a><br><br></div></div>';
+        prod.innerHTML += '<div class="column"><div class="content"><h3>Producto</h3>'+producto1+'<br><br>'+'<h3>Decripción</h3><p>'+producto2+'</p><br><br>' + '<a><img src="'+producto3+'" width="200" height="200" alt="'+en.categoria+'"></a><br><br></div></div>';
 
        }
     })
