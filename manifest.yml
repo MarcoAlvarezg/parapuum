@@ -1,5 +1,5 @@
 applications:
-- name: Developers-IBM
+- name: LaCompuDeLaEsquina
   memory: 256M
   services:
         - appIDInstanceName-alias

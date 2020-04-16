@@ -276,7 +276,7 @@ Modificacion de la foto de inicio */
   height: auto;
   text-align: center;
   color: #fff;
-  background: url(../images/about.jpg) no-repeat center center;
+  background: url(../images/home.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -367,9 +367,8 @@ Modificacion de la foto de inicio */
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  }
-  
-          /*inicio*/
+  }   
+      /*inicio*/
           * {
             box-sizing: border-box;
           }
@@ -381,14 +380,14 @@ Modificacion de la foto de inicio */
           
           /* Add padding BETWEEN each column */
           .prod,
-          .prod > .column {
+          .prod > .columnprod {
             padding: 8px;
           }
           
           /* Create four equal columns that floats next to each other */
-          .column {
+          .columnprod {
             float: left;
-            width: 50%;
+            width: 33.33%;
           }
           
           /* Clear floats after rows */ 
@@ -399,26 +398,64 @@ Modificacion de la foto de inicio */
           }
           
           /* Content */
-          .content {
-            background-color: rgba(30, 144, 255, 0.30);
+          .contentprod {
+            /* background-color: rgba(30, 144, 255, 0.30); */
             padding: 10px;
           }
           
           /* Responsive layout - makes a two column-layout instead of four columns */
           @media screen and (max-width: 900px) {
-            .column {
+            .columnprod {
               width: 70%;
             }
           }
           
           /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
           @media screen and (max-width: 600px) {
-            .column {
+            .columnprod {
               width: 100%;
             }
           }
           /*fin*/
-          
+  /*inicio face in overlay*/
+  .contentprod {
+    position: relative;
+    width: 85%;
+  }
+  
+  .imagetable {
+    display: block;
+  }
+  
+  .overlaytable {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .contentprod:hover .overlaytable {
+    opacity: 1;
+  }
+  
+  .texttable {
+    color: black;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+   /*fin*/ 
  
 
 
