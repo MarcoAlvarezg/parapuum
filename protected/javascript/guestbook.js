@@ -19,7 +19,7 @@ const guestbook = {
   //agregar un comentario nuevo
   //inicia
   add(nombre, correo, comentario) {
-    console.log('Sending', nombre, correo, comentario)
+    //console.log('Sending', nombre, correo, comentario)
     return $.ajax({
       type: 'POST',
       url: `${apiUrl}/entries`,
