@@ -84,7 +84,7 @@ var n=0;
       }
       var arr = result.entries;
       console.log(arr);
-      }
+      })
       /*
       $.each(arr, function(key, entry){
         function checkU(entry){
