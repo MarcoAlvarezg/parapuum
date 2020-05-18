@@ -2,4 +2,4 @@ applications:
 - name: LaCompuDeLaEsquina
   memory: 256M
   services:
-        - appIDInstanceName-alias
+        - App ID-qq
