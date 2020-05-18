@@ -142,6 +142,6 @@ var n=0;
 
   $(document).ready(function() {
     prepareTemplates();
-    //loadEntries();
+    loadEntries();
   });
 })();
