@@ -2,10 +2,10 @@
  * Web application
  */
 var Url = "https://873a8b89.us-south.apigw.appdomain.cloud/favoritos";
-var UrlU = "http://localhost:3000/protected/api/idPayload";
+var UrlU = "https://lacompudelaesquina.mybluemix.net/protected/api/idPayload";
 /* "http://localhost:3000/protected/api/idPayload"; 
    "https://developerchain.mybluemix.net/protected/api/idPayload"*/
-var UrlI = "http://localhost:3000/protected/api/inst";
+var UrlI = "https://lacompudelaesquina.mybluemix.net/protected/api/inst";
 /* "http://localhost:3000/protected/api/inst"; 
    "https://developerchain.mybluemix.net/protected/api/inst"*/
 //fs file open

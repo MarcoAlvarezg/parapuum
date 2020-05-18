@@ -1,4 +1,4 @@
-var UrlI = "http://localhost:3000/protected/api/inst";
+var UrlI = "https://lacompudelaesquina.mybluemix.net/protected/api/inst";
 
 const I = {
     get(){
