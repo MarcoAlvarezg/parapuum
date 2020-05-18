@@ -2,7 +2,7 @@
  * Web application
  */
 var Url = "https://873a8b89.us-south.apigw.appdomain.cloud/favoritos";
-var UrlU = "https://lacompudelaesquina.mybluemix.net/protected/api/idPayload";
+
 /* "http://localhost:3000/protected/api/idPayload"; 
    "https://developerchain.mybluemix.net/protected/api/idPayload"*/
 var UrlI = "https://lacompudelaesquina.mybluemix.net/protected/api/inst";
@@ -11,15 +11,6 @@ var UrlI = "https://lacompudelaesquina.mybluemix.net/protected/api/inst";
 //fs file open
 
 
-const USER = {
-  get(){
-    return $.ajax({
-      type: 'GET',
-      url: `${UrlU}`,
-      dataType: 'json'
-    });
-  },
-}
 // crear variables de ambiente que almacenas el HOST_BACKEND
 // y la consumes con processs.env.HOST_BACKEND
 // puedes usar IBMcloudenv o el https://www.npmjs.com/package/dotenv
@@ -74,32 +65,33 @@ var n=0;
   }
 
   // retrieve entries and update the UI
- /* function loadEntries() {
+  /* function loadEntries() {
     USER.get().done(function(rest){
       if(!rest){
         return
       }
-      x = rest;
-      console.log(x);
-      }); */
-      INST.get().done(function(res){
+      x = rest.email;
+      });
+    INST.get().done(function(res){
       if(!res){
         return;
       }
-      x = res.docs;
-    });/*
-    cloudantConnection.get().done(function(result) {
+      i = res.docs;
+    });
+    */cloudantConnection.get().done(function(result) {
       if (!result.entries) {
         return;
       }
       var arr = result.entries;
-      
+      console.log(arr);
+      /*
       $.each(arr, function(key, entry){
         function checkU(entry){
           return entry.name==x;
         }
         h = arr.filter(checkU);
         })
+        
         var totalH = h.reduce((sum, value) => (typeof value.hours == "number" ? sum + value.hours : sum), 0);
         $("#horasReg").html(totalH);
         $.each(i, function(key, entry){
@@ -117,8 +109,8 @@ var n=0;
         k.style.background="linear-gradient("+n+"deg, rgb(0, 0, 255) 50%, rgba(0, 0, 0, 0.2) 50%)";
         })
       }
-      );*/
-    } 
+      );
+    } */
 
   // intercept the click on the submit button, add the guestbook entry and
   // reload entries on success
@@ -142,6 +134,6 @@ var n=0;
 
   $(document).ready(function() {
     prepareTemplates();
-    loadEntries();
+    //loadEntries();
   });
 })();
