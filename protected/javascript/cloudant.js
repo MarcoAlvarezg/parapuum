@@ -74,20 +74,20 @@ var n=0;
   }
 
   // retrieve entries and update the UI
- function loadEntries() {
+ /* function loadEntries() {
     USER.get().done(function(rest){
       if(!rest){
         return
       }
       x = rest;
       console.log(x);
-      });
-     /* INST.get().done(function(res){
+      }); */
+      INST.get().done(function(res){
       if(!res){
         return;
       }
-      i = res.docs;
-    });
+      x = res.docs;
+    });/*
     cloudantConnection.get().done(function(result) {
       if (!result.entries) {
         return;
