@@ -74,14 +74,15 @@ var n=0;
   }
 
   // retrieve entries and update the UI
-  /* function loadEntries() {
+ function loadEntries() {
     USER.get().done(function(rest){
       if(!rest){
         return
       }
-      x = rest.email;
+      x = rest;
+      console.log(x);
       });
-    INST.get().done(function(res){
+     /* INST.get().done(function(res){
       if(!res){
         return;
       }
@@ -116,8 +117,8 @@ var n=0;
         k.style.background="linear-gradient("+n+"deg, rgb(0, 0, 255) 50%, rgba(0, 0, 0, 0.2) 50%)";
         })
       }
-      );
-    } */
+      );*/
+    } 
 
   // intercept the click on the submit button, add the guestbook entry and
   // reload entries on success
