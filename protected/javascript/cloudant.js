@@ -77,7 +77,7 @@ var n=0;
         return;
         console.log("houston")
       }
-      i = res.docs;
+      i = res;
     });
     console.log(i);
     var i2 = i.cateotia+" "+i.nombre;
