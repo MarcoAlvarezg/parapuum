@@ -78,6 +78,7 @@ var n=0;
       }
       i = res.docs;
     });
+    console.log(i);
     var i2 = i.cateotia+" "+i.nombre;
    var arr;
     cloudantConnection.get().done(function(result) {
@@ -115,7 +116,7 @@ var n=0;
         })
       }
       );*/
-    },)
+    })
 
   // intercept the click on the submit button, add the guestbook entry and
   // reload entries on success
