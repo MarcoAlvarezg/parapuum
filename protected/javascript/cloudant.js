@@ -75,6 +75,7 @@ var n=0;
     INST.get().done(function(res){
       if(!res){
         return;
+        console.log("houston")
       }
       i = res.docs;
     });
@@ -86,7 +87,7 @@ var n=0;
         return;
       }
       arr = result.entries;
-      //console.log(arr);
+      console.log(arr);
       })
 
     
