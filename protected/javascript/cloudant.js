@@ -78,7 +78,7 @@ var n=0;
       }
       i = res.docs;
       var i2 = i.cateotia+" "+i.nombre;
-      console.log(i);
+      //console.log(i);
     });
     
     
@@ -88,15 +88,16 @@ var n=0;
         return;
       }
       arr = result.entries;
-      console.log(arr);
+      //console.log(arr);
       })
 
     
-      $.each(arr, function(key, entry){
-        function checkU(entry){
-          return entry.ins;
+      $.each(arr, function(key, sal){
+        function checkU(sal){
+          return sal.ins;
         }
         h = arr.filter(checkU);
+        console.log(h);
         })
         
         var totalH = h.reduce((sum, value) => (typeof value.raiting == "number" ? sum + value.hours : sum), 0);
