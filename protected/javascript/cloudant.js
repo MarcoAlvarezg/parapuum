@@ -75,12 +75,13 @@ var n=0;
     INST.get().done(function(res){
       if(!res){
         return;
-        console.log("houston")
       }
-      i = res;
+      i = res.docs;
+      var i2 = i.cateotia+" "+i.nombre;
+      console.log(i);
     });
-    console.log(i);
-    var i2 = i.cateotia+" "+i.nombre;
+    
+    
    var arr;
     cloudantConnection.get().done(function(result) {
       if (!result.entries) {
