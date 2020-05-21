@@ -142,11 +142,11 @@ function loadEntries() {
       alert("Verifique datos ingresados");
       console.log(error);
     });
-  });
-
+   });
+    }
   $(document).ready(function() {
     prepareTemplates();
     loadEntries();
   });
-} 
+ 
 })();
