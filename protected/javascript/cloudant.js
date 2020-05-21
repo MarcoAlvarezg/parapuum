@@ -91,13 +91,13 @@ var n=0;
       //console.log(arr);
       });
 
-    
+    var h = 0;
       $.each(arr, function(key, sal){
         function checkU(sal){
           return sal.ins;
         }
         h = arr.filter(checkU);
-        console.log(h);
+        
         });
         
         var totalH = h.reduce((sum, value) => (typeof value.raiting == "number" ? sum + value.hours : sum), 0);
