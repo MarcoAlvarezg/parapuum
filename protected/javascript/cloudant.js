@@ -82,14 +82,14 @@ var n=0;
     });
     
     
-   var arr;
+   var arr=0;
     cloudantConnection.get().done(function(result) {
       if (!result.entries) {
         return;
       }
       arr = result.entries;
       //console.log(arr);
-      })
+      });
 
     
       $.each(arr, function(key, sal){
@@ -98,7 +98,7 @@ var n=0;
         }
         h = arr.filter(checkU);
         console.log(h);
-        })
+        });
         
         var totalH = h.reduce((sum, value) => (typeof value.raiting == "number" ? sum + value.hours : sum), 0);
         //$("#horasReg").html(totalH);
@@ -119,7 +119,7 @@ var n=0;
         })
       }
       );*/
-    })
+          });
 
   // intercept the click on the submit button, add the guestbook entry and
   // reload entries on success
