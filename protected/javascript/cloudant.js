@@ -65,7 +65,7 @@ var n=0;
   }
 
   // retrieve entries and update the UI
-   function loadEntries() {
+function loadEntries() {
   /*  USER.get().done(function(rest){
       if(!rest){
         return
@@ -146,7 +146,7 @@ var n=0;
 
   $(document).ready(function() {
     prepareTemplates();
-    //loadEntries();
+    loadEntries();
   });
 } 
 })();
