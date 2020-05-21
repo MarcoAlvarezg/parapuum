@@ -126,6 +126,8 @@ function loadEntries() {
           
   // intercept the click on the submit button, add the guestbook entry and
   // reload entries on success
+
+        }
   $(document).on('submit', '#addActivity', function(e) {
     e.preventDefault();
     cloudantConnection.add(
@@ -143,10 +145,10 @@ function loadEntries() {
       console.log(error);
     });
    });
-    }
+    
   $(document).ready(function() {
     prepareTemplates();
     loadEntries();
   });
- 
-})();
+  }
+)();
