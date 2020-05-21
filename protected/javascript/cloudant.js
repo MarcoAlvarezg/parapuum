@@ -65,8 +65,8 @@ var n=0;
   }
 
   // retrieve entries and update the UI
-  /* function loadEntries() {
-    USER.get().done(function(rest){
+   function loadEntries() {
+  /*  USER.get().done(function(rest){
       if(!rest){
         return
       }
@@ -145,4 +145,5 @@ var n=0;
     prepareTemplates();
     //loadEntries();
   });
+} 
 })();
