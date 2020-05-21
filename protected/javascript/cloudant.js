@@ -121,6 +121,9 @@ var n=0;
       );*/
           });
 
+          console.log(h);
+          console.log(totalH);
+          
   // intercept the click on the submit button, add the guestbook entry and
   // reload entries on success
   $(document).on('submit', '#addActivity', function(e) {
