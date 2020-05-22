@@ -67,34 +67,35 @@ var n=0;
   // retrieve entries and update the UI
 function loadEntries() {
   
+  var i2, h, totalEH;
     INST.get().done(function(res){
       if(!res){
         return;
       }
       i = res.docs;
-      var i2 = i.cateotia+" "+i.nombre;
+      i2 = i.cateotia+" "+i.nombre;
       //console.log(i);
     });
     
     
    var arr=0;
     cloudantConnection.get().done(function(result) {
+
       if (!result.entries) {
         return;
       }
       arr = result.entries;
-      //console.log(arr);
-
-    var h = 0;
+      
+    
       $.each(arr, function(key, sal){
         function checkU(sal){
           return sal.ins;
         }
         h = arr.filter(checkU);
-        
         });
-        
-        var totalH = h.reduce((sum, value) => (typeof value.raiting == "number" ? sum + value.hours : sum), 0);
+        console.log(arr);
+        console.log(h);
+        /* totalH = h.reduce((sum, value) => (typeof value.raiting == "number" ? sum + value.raiting : sum), 0);
         //$("#horasReg").html(totalH);
         $.each(i2, function(key, entry){
           $.each(arr, function(k,e){
@@ -104,23 +105,20 @@ function loadEntries() {
             eh = arr.filter(checkI);
           })
           console.log(eh);
-        var totalEH = eh.reduce((sum, value) => (typeof value.hours == "number" ? sum + value.hours : sum), 0);
+         totalEH = eh.reduce((sum, value) => (typeof value.hours == "number" ? sum + value.hours : sum), 0);
         //$("#"+entry._id).html(totalEH+" / 100");   
         console.log(totalEH);
-       /* var k =document.getElementById(entry._rev);
+       /var k =document.getElementById(entry._rev);
         n=(totalEH/40)*180;
         k.style.background="linear-gradient("+n+"deg, rgb(0, 0, 255) 50%, rgba(0, 0, 0, 0.2) 50%)";
         })*/
-      });
+      //});
           });
 
-          console.log(h);
-          console.log(totalH);
-          
+}  
   // intercept the click on the submit button, add the guestbook entry and
   // reload entries on success
-
-        }
+        
   $(document).on('submit', '#addActivity', function(e) {
     e.preventDefault();
     cloudantConnection.add(
