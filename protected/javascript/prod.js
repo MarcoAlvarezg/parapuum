@@ -1,5 +1,5 @@
 var UrlI = "https://lacompudelaesquina.mybluemix.net/protected/api/inst";
-//https://lacompudelaesquina.mybluemix.net/protected/api/insthttp://localhost:3000/protected/api/inst
+//https://lacompudelaesquina.mybluemix.net/protected/api/inst
 
 const I = {
     get(){
