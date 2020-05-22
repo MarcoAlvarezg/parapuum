@@ -66,12 +66,7 @@ var n=0;
 
   // retrieve entries and update the UI
 function loadEntries() {
-  /*  USER.get().done(function(rest){
-      if(!rest){
-        return
-      }
-      x = rest.email;
-      });*/
+  
     INST.get().done(function(res){
       if(!res){
         return;
@@ -89,7 +84,6 @@ function loadEntries() {
       }
       arr = result.entries;
       //console.log(arr);
-      });
 
     var h = 0;
       $.each(arr, function(key, sal){
@@ -116,9 +110,8 @@ function loadEntries() {
        /* var k =document.getElementById(entry._rev);
         n=(totalEH/40)*180;
         k.style.background="linear-gradient("+n+"deg, rgb(0, 0, 255) 50%, rgba(0, 0, 0, 0.2) 50%)";
-        })
-      }
-      );*/
+        })*/
+      });
           });
 
           console.log(h);
