@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<div                </div lang="en">
+<div>                </div lang="en">
 <head>
         <link rel="shortcut icon" type="image/png" href="./images/compu.png">
         <meta charset="utf-8">
@@ -50,6 +49,27 @@
                 <li> <a class="page-scroll" href="#Productos">Productos</a> </li>
                 <li> <a class="page-scroll" href="#Favoritos">Favoritos </a></li>
                 <li> <a class="page-scroll" href="#Sugerencias">Sugerencias</a> </li>
+                <li class="nav-item dropdown">
+                  <img src="images/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                      width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false"></img>
+                  <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                      <table id="lista-carrito" class="table">
+                          <thead>
+                              <tr>
+                                  <th>Imagen</th>
+                                  <th>Nombre</th>
+                                  <th>Precio</th>
+                                  <th></th>
+                              </tr>
+                          </thead>
+                          <tbody></tbody>
+                      </table>
+
+                      <a href="#" id="vaciar-carrito" class="b">Vaciar Carrito</a>
+                      <a href="#" id="procesar-pedido" class="b">Procesar Compra</a>
+                  </div>
+              </li>
               </ul>
             </div>
           </div>
@@ -84,16 +104,26 @@
               <hr>
               </div>
                 <div id="prod">
+                  <script src="./javascript/carrito.js"></script>
+                  <script src="./javascript/compra.js"></script>
                   
 
+                   <script>
 
+                    var plus= function(id,objt){
+                      const obj = [];
+                      obj.push(id);
+                      console.log(obj);
+                    }
+                  </script>
                 </div>
                 <br>
                 <br>
                 <br>
                 <br>
-                
-              </div>          
+              </div>  
+              <a href="/protected/protected3.html" ><button class="btn btn-default">Carrito</button></a>
+                             
           </div>
         </div>
         </div>
@@ -282,6 +312,7 @@
           <script src="./javascript/prod.js"></script>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
           <script src="./javascript/guestbook.js"></script>
+        
           <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
           <script>
             //para el nombre de usuario

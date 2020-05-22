@@ -1,20 +1,8 @@
-/*
- * Web application
- */
+
 var Url = "https://873a8b89.us-south.apigw.appdomain.cloud/favoritos";
 
-/* "http://localhost:3000/protected/api/idPayload"; 
-   "https://developerchain.mybluemix.net/protected/api/idPayload"*/
-var UrlI = "https://lacompudelaesquina.mybluemix.net/protected/api/inst";
-/* "http://localhost:3000/protected/api/inst"; 
-   "https://developerchain.mybluemix.net/protected/api/inst"*/
-//fs file open
+var UrlI = "https://developerchain.mybluemix.net/protected/api/inst";
 
-
-// crear variables de ambiente que almacenas el HOST_BACKEND
-// y la consumes con processs.env.HOST_BACKEND
-// puedes usar IBMcloudenv o el https://www.npmjs.com/package/dotenv
-//retrieve the existing universities entries
 const INST = {
   get(){
     return $.ajax({
@@ -23,7 +11,7 @@ const INST = {
       dataType: 'json'
     });
   },
-}
+};
 
 const cloudantConnection = {
   // retrieve the existing activitis entries
@@ -37,7 +25,7 @@ const cloudantConnection = {
   // add a single activity entry
   add(ins, raiting, comment) {
     
-    console.log('Sending', ins, raiting, comment)
+    //console.log('Sending', ins, raiting, comment)
     return fetch(`${Url}/entries`,{
         method: "POST",
         body: JSON.stringify({
@@ -51,32 +39,25 @@ const cloudantConnection = {
      })
   }
 };
-var x;
-var i;
-var h=0;
-var eh;
-var n=0;
-(function() {
 
+
+(function() {
+  var i;
+  var i2, h, totalEH;;
   let entriesTemplate;
 
   function prepareTemplates() {
     entriesTemplate = Handlebars.compile($('#entries-template').html());
   }
 
-  // retrieve entries and update the UI
 function loadEntries() {
   
-  var i2, h, totalEH;
-    INST.get().done(function(res){
-      if(!res){
+    INST.get().done(function(rest){
+      if(!rest){
         return;
       }
-      i = res.docs;
-      i2 = i.cateotia+" "+i.nombre;
-      //console.log(i);
+      i = rest.docs;
     });
-    
     
    var arr=0;
     cloudantConnection.get().done(function(result) {
@@ -85,16 +66,14 @@ function loadEntries() {
         return;
       }
       arr = result.entries;
-      
     
       $.each(arr, function(key, sal){
         function checkU(sal){
-          return sal.ins;
+          return sal.ins==i2;
         }
         h = arr.filter(checkU);
         });
-        console.log(arr);
-        console.log(h);
+        
         /* totalH = h.reduce((sum, value) => (typeof value.raiting == "number" ? sum + value.raiting : sum), 0);
         //$("#horasReg").html(totalH);
         $.each(i2, function(key, entry){
